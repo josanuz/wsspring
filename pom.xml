@@ -3,11 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>tk.johan.tk.johan.wsspring</groupId>
-	<artifactId>tk.johan.wsspring</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>tk.johan.wsspring</groupId>
+	<artifactId>wsspring</artifactId>
+	<version>0.1.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
 	<name>tk.johan.wsspring</name>
 	<description>tk.johan.wsspring</description>
 

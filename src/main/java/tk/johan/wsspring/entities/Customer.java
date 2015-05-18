@@ -1,5 +1,7 @@
 package tk.johan.wsspring.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,7 +14,7 @@ public class Customer {
     private int customerId;
     private String customerPid;
     private String customerName;
-    //private Collection<Account> acounts;
+    private Collection<Account> acounts;
 
     public Customer() {
     }
@@ -21,7 +23,7 @@ public class Customer {
         this.customerId = customerId;
         this.customerPid = customerPid;
         this.customerName = customerName;
-        //this.acounts = new ArrayList<>();
+        this.acounts = new ArrayList<>();
     }
 
     @Id
@@ -79,7 +81,8 @@ public class Customer {
         return result;
     }
 
-    /*@OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy = "owner")
+    @JsonManagedReference
     public Collection<Account> getAcounts() {
         return acounts;
     }
@@ -87,7 +90,7 @@ public class Customer {
     public void setAcounts(Collection<Account> acounts) {
         this.acounts = acounts;
     }
-
+/*
     @Override
     public String toString(){
         return "[id="+customerId+"name"+customerName+"pid="+customerPid+"]";

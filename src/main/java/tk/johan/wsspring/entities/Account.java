@@ -1,5 +1,7 @@
 package tk.johan.wsspring.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -99,6 +101,7 @@ public class Account {
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "customer_id", nullable = false)
+    @JsonBackReference
     public Customer getOwner() {
         return owner;
     }
