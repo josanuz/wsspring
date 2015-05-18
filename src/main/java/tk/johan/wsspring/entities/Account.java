@@ -57,6 +57,7 @@ public class Account {
 
     @Id
     @Column(name = "account_number")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getAccountNumber() {
         return accountNumber;
     }

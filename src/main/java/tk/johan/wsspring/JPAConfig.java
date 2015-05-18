@@ -2,6 +2,7 @@ package tk.johan.wsspring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -18,6 +19,7 @@ import java.util.Properties;
  * Created by Casa on 17/05/2015.
  */
 @Configuration
+@EnableJpaRepositories(basePackages = {"tk.johan.wsspring.JPARepositories"})
 @EnableTransactionManagement
 public class JPAConfig {
     @Bean

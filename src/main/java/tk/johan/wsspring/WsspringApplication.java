@@ -8,6 +8,7 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 import org.springframework.boot.context.embedded.ErrorPage;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @ComponentScan//({"tk.johan.sprjpadata.services","tk.johan.sprjpadata.app"})
 @EnableAutoConfiguration
+@EnableJpaRepositories("tk.johan.wsspring.JPARepositories")
 @SpringBootApplication
 public class WsspringApplication {
 

@@ -12,7 +12,7 @@ public class Customer {
     private int customerId;
     private String customerPid;
     private String customerName;
-    private Collection<Account> acounts;
+    //private Collection<Account> acounts;
 
     public Customer() {
     }
@@ -21,11 +21,12 @@ public class Customer {
         this.customerId = customerId;
         this.customerPid = customerPid;
         this.customerName = customerName;
-        this.acounts = new ArrayList<>();
+        //this.acounts = new ArrayList<>();
     }
 
     @Id
     @Column(name = "customer_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getCustomerId() {
         return customerId;
     }
@@ -78,7 +79,7 @@ public class Customer {
         return result;
     }
 
-    @OneToMany(mappedBy = "owner")
+    /*@OneToMany(mappedBy = "owner")
     public Collection<Account> getAcounts() {
         return acounts;
     }
@@ -90,5 +91,5 @@ public class Customer {
     @Override
     public String toString(){
         return "[id="+customerId+"name"+customerName+"pid="+customerPid+"]";
-    }
+    }*/
 }
